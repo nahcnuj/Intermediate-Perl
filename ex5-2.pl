@@ -6,7 +6,6 @@ use warnings;
 my %total_bytes;
 my %source_sent_bytes;
 
-open my $fh, '<', 'coconet.dat';
 while (<>) {
     next if /\A#/;
     my ($source, $destination, $amount) = split;

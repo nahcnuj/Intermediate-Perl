@@ -43,6 +43,10 @@ sub gather_mtime_between {
     sub {
       # $_ is a file name, $File::Find::name is a path to file from starting directory
       my $timestamp = (stat $_)[9]; # stat takes a file name
+      unless (defined $timestamp) { # e.g. when target file of a link is not found
+        warn "Could not stat $File::Find::name: $!, skipping\n";
+        return;
+      }
       push @found_files, $File::Find::name if $start_time <= $timestamp and $timestamp <= $end_time;
     },
     sub {

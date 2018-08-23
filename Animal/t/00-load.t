@@ -4,10 +4,13 @@ use strict;
 use warnings;
 use Test::More;
 
-plan tests => 1;
+plan tests => 6;
 
 BEGIN {
-    use_ok( 'Animal' ) || print "Bail out!\n";
+    for my $class (qw(Animal Cow Horse LivingCreature Mouse Person)) {
+        use_ok($class)
+            or print "Bail out! $class could not compile!\n";
+    }
 }
 
 diag( "Testing Animal $Animal::VERSION, Perl $], $^X" );

@@ -4,6 +4,8 @@ use 5.006;
 use strict;
 use warnings;
 
+use parent qw(Animal);
+
 =head1 NAME
 
 Cow - The great new Cow!
@@ -39,8 +41,7 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =cut
 
-sub function1 {
-}
+sub sound { 'mooooo' }
 
 =head2 function2
 

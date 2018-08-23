@@ -13,6 +13,7 @@ my $builder = Module::Build->new(
         'Module::Build' => '0',
     },
     build_requires => {
+        'parent'     => '0',
         'Test::More' => '0',
     },
     requires => {
@@ -20,6 +21,7 @@ my $builder = Module::Build->new(
         #'Foo::Bar::Module' => '5.0401',
     },
     add_to_cleanup     => [ 'Animal-*' ],
+    script_files       => [ qw(scripts/pasture.pl scripts/mouse.pl scripts/person.pl) ],
 );
 
 $builder->create_build_script();

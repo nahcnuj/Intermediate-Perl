@@ -2,8 +2,17 @@ Build.PL
 Changes
 lib/Animal.pm
 lib/Cow.pm
+lib/Horse.pm
+lib/LivingCreature.pm
+lib/Mouse.pm
+lib/Person.pm
+lib/Sheep.pm
 MANIFEST			This list of files
 README
+scripts/ex13-2.pl
+scripts/mouse.pl
+scripts/pasture.pl
+scripts/person.pl
 t/00-load.t
 t/manifest.t
 t/pod-coverage.t

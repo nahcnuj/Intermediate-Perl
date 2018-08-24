@@ -4,6 +4,8 @@ use 5.006;
 use strict;
 use warnings;
 
+use Carp qw(croak carp);
+
 =head1 NAME
 
 MyDate - The great new MyDate!
@@ -35,11 +37,55 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=cut 
+
+my @offset = (0, 0, 0, 0, 1, 1900, 0, 0, 0);
+my %allow_methods = (
+    day => 3,
+    month => 4,
+    year => 5,
+);
+
+=head2 new
+
+Constructor.
 
 =cut
 
-sub function1 {
+sub new {
+    ref(my $class = shift) and croak "Class variable needed";
+    my @date = localtime;
+    my $self = {
+        Day => $date[3],
+        Month => $date[4] + 1,
+        Year => $date[5] + 1900,
+    };
+    bless $self, $class;
+}
+
+=head2 DESTROY
+
+=cut
+
+sub DESTROY {}
+
+=head2 AUTOLOAD
+
+Getters.
+
+=cut
+
+sub AUTOLOAD {
+    our $AUTOLOAD;
+    my $self = shift;
+    (my $method = $AUTOLOAD) =~ s/.*:://;
+
+    my @allow_methods = qw(day month year);
+    unless (grep {$method eq $_} @allow_methods) {
+        carp "I don't know $method method";
+    }
+
+    $self->{ucfirst $method};
 }
 
 =head2 function2

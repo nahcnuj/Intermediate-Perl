@@ -15,6 +15,7 @@ scripts/pasture.pl
 scripts/person.pl
 t/00-load.t
 t/Animal.t
+t/Cow.t
 t/manifest.t
 t/pod-coverage.t
 t/pod.t

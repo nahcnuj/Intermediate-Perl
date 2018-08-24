@@ -4,7 +4,10 @@ use 5.006;
 use strict;
 use warnings;
 
-use parent qw(Animal);
+use Moose;
+with 'Animal';
+
+use namespace::autoclean;
 
 =head1 NAME
 
@@ -33,6 +36,13 @@ A list of functions that can be exported.  You can delete this section
 if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
+
+=cut
+
+has 'color' => (
+    is => 'rw',
+    default => 'spotted',
+);
 
 =head2 sound
 
@@ -130,5 +140,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut
+
+__PACKAGE__->meta->make_immutable;
 
 1; # End of Cow

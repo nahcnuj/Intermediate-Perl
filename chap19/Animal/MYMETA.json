@@ -16,8 +16,8 @@
    "prereqs" : {
       "build" : {
          "requires" : {
-            "Test::More" : "0",
-            "parent" : "0"
+            "Moose" : "0",
+            "Test::More" : "0"
          }
       },
       "configure" : {
@@ -49,6 +49,10 @@
       },
       "Person" : {
          "file" : "lib/Person.pm",
+         "version" : "0.01"
+      },
+      "RaceHorse" : {
+         "file" : "lib/RaceHorse.pm",
          "version" : "0.01"
       },
       "Sheep" : {

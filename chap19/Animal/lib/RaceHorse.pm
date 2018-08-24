@@ -58,15 +58,54 @@ sub named {
     $self;
 }
 
+=head2 won
+
+Record that the horse won.
+
+=cut
+
 sub won { shift->{wins}++; }
+
+=head2 placed
+
+Record that the horse placed.
+
+=cut
+
 sub placed { shift->{places}++; }
+
+=head2 showed
+
+Record that the horse showed.
+
+=cut
+
 sub showed { shift->{shows}++; }
+
+=head2 lost
+
+Record that the horse lost.
+
+=cut
+
 sub lost { shift->{losses}++; }
+
+=head2 standings
+
+Return standings.
+
+=cut
 
 sub standings {
     my $self = shift;
     join ', ', map "$self->{$_} $_", qw(wins places shows losses);
 }
+
+=head2 DESTROY
+
+Destructor.
+
+=cut
 
 sub DESTROY {
     my $self = shift;

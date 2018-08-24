@@ -4,11 +4,14 @@ use v5.8;
 use strict;
 use warnings;
 
-use parent qw(LivingCreature);
+use Moose::Role;
+#extends 'LivingCreature';
 
 use Carp qw(croak);
 use Scalar::Util qw(weaken);
 use Data::Dumper;
+
+requires qw(sound);
 
 =head1 NAME
 
@@ -36,7 +39,26 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =cut
 
-my %REGISTRY;
+has 'name' => (is => 'rw');
+has 'color' => (
+    is => 'rw',
+    default => sub { shift->default_color },
+);
+
+# has 'sound' => (
+#     is => 'ro',
+#     default => sub { confess shift, "needs to define sound!" }
+# );
+
+has 'speak' => (
+    is => 'ro',
+    default => sub {
+        my $self = shift;
+        print $self->name, " goes ", $self->sound, "\n";
+    }
+);
+
+# my %REGISTRY;
 
 =head2 named
 
@@ -44,22 +66,22 @@ Constructor.
 
 =cut
 
-sub named {
-    ref(my $class = shift) and croak 'class only';
-    my $name = shift;
-    my $self = {
-        Name => $name,
-        Color => $class->default_color,
-    };
-    bless $self, $class;
-    $REGISTRY{$self} = $self;
-    weaken($REGISTRY{$self});
-    $self;
-}
+# sub named {
+#     ref(my $class = shift) and croak 'class only';
+#     my $name = shift;
+#     my $self = {
+#         Name => $name,
+#         Color => $class->default_color,
+#     };
+#     bless $self, $class;
+#     $REGISTRY{$self} = $self;
+#     weaken($REGISTRY{$self});
+#     $self;
+# }
 
-sub registered {
-    return map { 'a ' . ref($_) . ' named ' . $_->name } grep { defined $_ } values %REGISTRY;
-}
+# sub registered {
+#     return map { 'a ' . ref($_) . ' named ' . $_->name } grep { defined $_ } values %REGISTRY;
+# }
 
 =head2 DESTROY
 
@@ -67,10 +89,10 @@ Destructor.
 
 =cut
 
-sub DESTROY {
-    my $self = shift;
-    print '[', $self->name, " has died.]\n";
-}
+# sub DESTROY {
+#     my $self = shift;
+#     print '[', $self->name, " has died.]\n";
+# }
 
 =head2 set_name
 
@@ -78,11 +100,11 @@ Set Animal's name.
 
 =cut
 
-sub set_name {
-    ref(my $self = shift) or croak "instance variable needed";
-    my $name = shift;
-    $self->{Name} = $name;
-}
+# sub set_name {
+#     ref(my $self = shift) or croak "instance variable needed";
+#     my $name = shift;
+#     $self->{Name} = $name;
+# }
 
 =head2 set_color
 
@@ -90,11 +112,11 @@ Set Animal's color.
 
 =cut
 
-sub set_color {
-    ref(my $self = shift) or croak "instance variable needed";
-    my $color = shift;
-    $self->{Color} = $color;
-}
+# sub set_color {
+#     ref(my $self = shift) or croak "instance variable needed";
+#     my $color = shift;
+#     $self->{Color} = $color;
+# }
 
 =head2 name
 
@@ -102,12 +124,12 @@ Get Animal's name.
 
 =cut
 
-sub name {
-    my $either = shift;
-    ref $either
-        ? $either->{Name}       # instance
-        : "an unnamed $either"  # class
-}
+# sub name {
+#     my $either = shift;
+#     ref $either
+#         ? $either->{Name}       # instance
+#         : "an unnamed $either"  # class
+# }
 
 =head2 color
 
@@ -115,12 +137,12 @@ Get Animal's color.
 
 =cut
 
-sub color {
-    my $either = shift;
-    ref $either
-        ? $either->{Color}
-        : $either->default_color;
-}
+# sub color {
+#     my $either = shift;
+#     ref $either
+#         ? $either->{Color}
+#         : $either->default_color;
+# }
 
 =head2 default_color
 
@@ -128,7 +150,7 @@ Get Animal's default color.
 
 =cut
 
-sub default_color { 'brown' }
+# sub default_color { 'brown' }
 
 =head2 speak
 
@@ -136,11 +158,11 @@ Let Animal speak
 
 =cut
 
-sub speak {
-    my $class = shift;
-    die "Animal can not speak!" if @_;
-    print "A $class goes ", $class->sound, "!\n";
-}
+# sub speak {
+#     my $class = shift;
+#     die "Animal can not speak!" if @_;
+#     print "A $class goes ", $class->sound, "!\n";
+# }
 
 =head2 sound
 
@@ -148,9 +170,9 @@ Return sound of Animal.
 
 =cut
 
-sub sound {
-    die 'You have to define sound() method in a subclass'
-}
+# sub sound {
+#     die 'You have to define sound() method in a subclass'
+# }
 
 =head1 AUTHOR
 

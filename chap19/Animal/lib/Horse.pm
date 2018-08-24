@@ -1,10 +1,12 @@
 package Horse;
 
-use 5.006;
 use strict;
 use warnings;
 
-use parent qw(Animal);
+use Moose;
+with 'Animal';
+
+use namespace::autoclean;
 
 =head1 NAME
 
@@ -34,7 +36,14 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=cut
+
+has 'color' => (
+    is => 'rw',
+    default => 'brawn',
+);
+
+=head2 sound
 
 Return the sound of Horse
 
@@ -130,5 +139,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut
+
+__PACKAGE__->meta->make_immutable;
 
 1; # End of Horse

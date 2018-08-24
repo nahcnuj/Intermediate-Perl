@@ -4,7 +4,8 @@ use 5.006;
 use strict;
 use warnings;
 
-use parent qw(Animal);
+use Moose;
+with 'Animal';
 
 =head1 NAME
 
@@ -139,5 +140,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut
+
+__PACKAGE__->meta->make_immutable;
 
 1; # End of Sheep

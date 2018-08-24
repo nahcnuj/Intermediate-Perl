@@ -4,7 +4,10 @@ use 5.10.1;
 use strict;
 use warnings;
 
-use parent qw(Animal);
+use Moose;
+with 'Animal';
+
+use namespace::autoclean;
 
 =head1 NAME
 
@@ -44,6 +47,15 @@ Return the sound of Mouse.
 sub sound {
     'squeak'
 }
+
+has 'color' => (
+    is => 'rw',
+    default => 'grey',
+);
+
+after 'speak' => sub {
+    print "[but you can barely hear it!]\n";
+};
 
 =head1 AUTHOR
 
@@ -133,5 +145,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut
+
+__PACKAGE__->meta->make_immutable;
 
 1; # End of Mouse

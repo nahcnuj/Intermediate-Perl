@@ -35,6 +35,15 @@ Perhaps a little code snippet.
 A list of functions that can be exported.  You can delete this section
 if you don't export anything, such as for a purely object-oriented module.
 
+=cut
+
+sub UNIVERSAL::debug {
+    my $self = shift;
+    my $message = "@_";
+    my $date = localtime;
+    print "$date: $message\n";
+}
+
 =head1 SUBROUTINES/METHODS
 
 =cut 

@@ -8,3 +8,5 @@ my $date = MyDate->new;
 print $date->year, '/', $date->month, '/', $date->day, "\n";
 
 $date->hour; # unknown method
+
+$date->debug('Hello, world!');

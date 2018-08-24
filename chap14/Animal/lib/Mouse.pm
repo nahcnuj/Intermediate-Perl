@@ -21,14 +21,12 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
+Mouse.
 
     use Mouse;
 
-    my $foo = Mouse->new();
-    ...
+    print Mouse->sound, "\n";
+    Mouse->sepak;
 
 =head1 EXPORT
 
@@ -37,17 +35,15 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 sound
+
+Return the sound of Mouse.
 
 =cut
 
 sub sound {
     'squeak'
 }
-
-=head2 function2
-
-=cut
 
 =head1 AUTHOR
 

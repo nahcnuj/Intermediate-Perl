@@ -20,15 +20,15 @@ http://www.pjcj.net
 <h1>File Coverage</h1>
 <table>
 <tr><td class="h" align="right">File:</td><td align="left">blib/lib/LivingCreature.pm</td></tr>
-<tr><td class="h" align="right">Coverage:</td><td align="left" class="c0">50.0%</td></tr>
+<tr><td class="h" align="right">Coverage:</td><td align="left" class="c3">100.0%</td></tr>
 </table>
 <div><br/></div>
 <table>
 <tr><th>line</th><th>stmt</th><th>bran</th><th>cond</th><th>sub</th><th>pod</th><th>time</th><th>code</th></tr>
 <tr><td class="h">1</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">package LivingCreature;</td></tr>
-<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L3">5</a></div></td><td></td><td><div>745</div><div>11</div></td><td class="s">use 5.006;</td></tr>
-<tr><td class="h">4</td><td><div class="c3">5</div><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L4">5</a></div></td><td></td><td><div>15</div><div>7</div><div>37</div></td><td class="s">use strict;</td></tr>
-<tr><td class="h">5</td><td><div class="c3">5</div><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L5">5</a></div></td><td></td><td><div>10</div><div>16</div><div>387</div></td><td class="s">use warnings;</td></tr>
+<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">16</div><div class="c3">16</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L3">16</a></div></td><td></td><td><div>19391</div><div>31</div></td><td class="s">use 5.006;</td></tr>
+<tr><td class="h">4</td><td><div class="c3">16</div><div class="c3">16</div><div class="c3">16</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L4">16</a></div></td><td></td><td><div>61</div><div>23</div><div>138</div></td><td class="s">use strict;</td></tr>
+<tr><td class="h">5</td><td><div class="c3">16</div><div class="c3">16</div><div class="c3">16</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L5">16</a></div></td><td></td><td><div>36</div><div>42</div><div>1232</div></td><td class="s">use warnings;</td></tr>
 <tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7 - 15</td><td colspan="6"></td><td class="s"><pre>=head1 NAME
 
 LivingCreature - The great new LivingCreature!
@@ -39,16 +39,9 @@ Version 0.01
 
 =cut</pre></td></tr>
 <tr><td class="h">16</td><td colspan="7"></td></tr><tr><td class="h">17</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">our $VERSION = &#39;0.01&#39;;</td></tr>
-<tr><td class="h">18</td><td colspan="7"></td></tr><tr><td class="h">19</td><td colspan="7"></td></tr><tr><td class="h">20 - 40</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
+<tr><td class="h">18</td><td colspan="7"></td></tr><tr><td class="h">19</td><td colspan="7"></td></tr><tr><td class="h">20 - 35</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
-&nbsp;&nbsp;&nbsp;&nbsp;use LivingCreature;
-
-&nbsp;&nbsp;&nbsp;&nbsp;my $foo = LivingCreature-&gt;new();
-&nbsp;&nbsp;&nbsp;&nbsp;...
+LivingCreature class is a base class of all living creatures.
 
 =head1 EXPORT
 
@@ -57,24 +50,28 @@ if you don&#39;t export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 speak
+
+Let a living creature speak.
 
 =cut</pre></td></tr>
-<tr><td class="h">41</td><td colspan="7"></td></tr><tr><td class="h">42</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub speak {</td></tr>
-<tr><td class="h">43</td><td><div class="c0">0</div></td><td></td><td></td><td><div class="c0"><a href="blib-lib-LivingCreature-pm--subroutine.html#L43">0</a></div></td><td><div class="c0">0</div></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;my $class = shift;</td></tr>
-<tr><td class="h">44</td><td colspan="7"></td></tr><tr><td class="h">45</td><td><div class="c0">0</div></td><td><div class="c0" title="-/-"><a href="blib-lib-LivingCreature-pm--branch.html#L45">0</a></div></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;if (@_) {</td></tr>
-<tr><td class="h">46</td><td><div class="c0">0</div></td><td></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print &quot;A $class says &#39;@_&#39;\n&quot;;</td></tr>
-<tr><td class="h">47</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;} else {</td></tr>
-<tr><td class="h">48</td><td><div class="c0">0</div></td><td></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print &quot;A $class goes &quot;, $class-&gt;sound, &quot;\n&quot;;</td></tr>
-<tr><td class="h">49</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
-<tr><td class="h">50</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
-<tr><td class="h">51</td><td colspan="7"></td></tr><tr><td class="h">52 - 54</td><td colspan="6"></td><td class="s"><pre>=head2 function2
+<tr><td class="h">36</td><td colspan="7"></td></tr><tr><td class="h">37</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub speak {</td></tr>
+<tr><td class="h">38</td><td><div class="c3">8</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L38">8</a></div></td><td><div class="c3">1</div></td><td><div>1312</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;my $class = shift;</td></tr>
+<tr><td class="h">39</td><td colspan="7"></td></tr><tr><td class="h">40</td><td><div class="c3">8</div></td><td><div class="c3" title="T/F"><a href="blib-lib-LivingCreature-pm--branch.html#L40">100</a></div></td><td></td><td></td><td></td><td><div>28</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;if (@_) {</td></tr>
+<tr><td class="h">41</td><td><div class="c3">2</div></td><td></td><td></td><td></td><td></td><td><div>11</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print &quot;A $class says &#39;@_&#39;\n&quot;;</td></tr>
+<tr><td class="h">42</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;} else {</td></tr>
+<tr><td class="h">43</td><td><div class="c3">6</div></td><td></td><td></td><td></td><td></td><td><div>33</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print &quot;A $class goes &quot;, $class-&gt;sound, &quot;\n&quot;;</td></tr>
+<tr><td class="h">44</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;}</td></tr>
+<tr><td class="h">45</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
+<tr><td class="h">46</td><td colspan="7"></td></tr><tr><td class="h">47 - 51</td><td colspan="6"></td><td class="s"><pre>=head2 sound
+
+Return the sound of a living creature.
 
 =cut</pre></td></tr>
-<tr><td class="h">55</td><td colspan="7"></td></tr><tr><td class="h">56</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub sound {</td></tr>
-<tr><td class="h">57</td><td><div class="c0">0</div></td><td></td><td></td><td><div class="c0"><a href="blib-lib-LivingCreature-pm--subroutine.html#L57">0</a></div></td><td><div class="c0">0</div></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;die &quot;Not implemented (define in subclasses!)&quot;;</td></tr>
-<tr><td class="h">58</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
-<tr><td class="h">59</td><td colspan="7"></td></tr><tr><td class="h">60 - 147</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
+<tr><td class="h">52</td><td colspan="7"></td></tr><tr><td class="h">53</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub sound {</td></tr>
+<tr><td class="h">54</td><td><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-LivingCreature-pm--subroutine.html#L54">4</a></div></td><td><div class="c3">1</div></td><td><div>63122</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;die &quot;Not implemented (define in subclasses!)&quot;;</td></tr>
+<tr><td class="h">55</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
+<tr><td class="h">56</td><td colspan="7"></td></tr><tr><td class="h">57 - 144</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
 
 Junichi Hayashi, C&lt;&lt; &lt;j-hayashi at seesaa.co.jp&gt; &gt;&gt;
 
@@ -162,7 +159,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut</pre></td></tr>
-<tr><td class="h">148</td><td colspan="7"></td></tr><tr><td class="h">149</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of LivingCreature</td></tr>
+<tr><td class="h">145</td><td colspan="7"></td></tr><tr><td class="h">146</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of LivingCreature</td></tr>
 </table>
 </body>
 </html>

@@ -19,14 +19,7 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
-    use LivingCreature;
-
-    my $foo = LivingCreature->new();
-    ...
+LivingCreature class is a base class of all living creatures.
 
 =head1 EXPORT
 
@@ -35,7 +28,9 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 speak
+
+Let a living creature speak.
 
 =cut
 
@@ -49,7 +44,9 @@ sub speak {
     }
 }
 
-=head2 function2
+=head2 sound
+
+Return the sound of a living creature.
 
 =cut
 

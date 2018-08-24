@@ -11,4 +11,7 @@ diag( "Testing Horse $Horse::VERSION, Perl $], $^X" );
 
 ok(defined &Horse::sound, 'Horse::sound is defined');
 
+is(Horse->sound, 'neigh', 'sound of Horse');
+ok(Horse->speak, 'Horse can sound');
+
 done_testing();

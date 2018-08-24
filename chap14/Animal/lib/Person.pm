@@ -21,14 +21,13 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
+Person.
 
     use Person;
 
-    my $foo = Person->new();
-    ...
+    print Person->sound, "\n";
+    Person->speak;
+    Person->speak('Hello, world!');
 
 =head1 EXPORT
 
@@ -37,11 +36,9 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 sound
 
-=cut
-
-=head2 function2
+The humming sound.
 
 =cut
 

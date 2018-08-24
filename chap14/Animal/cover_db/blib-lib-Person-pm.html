@@ -20,16 +20,16 @@ http://www.pjcj.net
 <h1>File Coverage</h1>
 <table>
 <tr><td class="h" align="right">File:</td><td align="left">blib/lib/Person.pm</td></tr>
-<tr><td class="h" align="right">Coverage:</td><td align="left" class="c1">83.3%</td></tr>
+<tr><td class="h" align="right">Coverage:</td><td align="left" class="c3">100.0%</td></tr>
 </table>
 <div><br/></div>
 <table>
 <tr><th>line</th><th>stmt</th><th>bran</th><th>cond</th><th>sub</th><th>pod</th><th>time</th><th>code</th></tr>
 <tr><td class="h">1</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">package Person;</td></tr>
-<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">1</div><div class="c3">1</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L3">1</a></div></td><td></td><td><div>411</div><div>2</div></td><td class="s">use 5.006;</td></tr>
-<tr><td class="h">4</td><td><div class="c3">1</div><div class="c3">1</div><div class="c3">1</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L4">1</a></div></td><td></td><td><div>3</div><div>1</div><div>8</div></td><td class="s">use strict;</td></tr>
-<tr><td class="h">5</td><td><div class="c3">1</div><div class="c3">1</div><div class="c3">1</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L5">1</a></div></td><td></td><td><div>2</div><div>1</div><div>15</div></td><td class="s">use warnings;</td></tr>
-<tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7</td><td><div class="c3">1</div><div class="c3">1</div><div class="c3">1</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L7">1</a></div></td><td></td><td><div>2</div><div>1</div><div>3</div></td><td class="s">use parent qw(LivingCreature);</td></tr>
+<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L3">4</a></div></td><td></td><td><div>18992</div><div>9</div></td><td class="s">use 5.006;</td></tr>
+<tr><td class="h">4</td><td><div class="c3">4</div><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L4">4</a></div></td><td></td><td><div>10</div><div>4</div><div>38</div></td><td class="s">use strict;</td></tr>
+<tr><td class="h">5</td><td><div class="c3">4</div><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L5">4</a></div></td><td></td><td><div>12</div><div>5</div><div>57</div></td><td class="s">use warnings;</td></tr>
+<tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7</td><td><div class="c3">4</div><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L7">4</a></div></td><td></td><td><div>282</div><div>261</div><div>11</div></td><td class="s">use parent qw(LivingCreature);</td></tr>
 <tr><td class="h">8</td><td colspan="7"></td></tr><tr><td class="h">9 - 17</td><td colspan="6"></td><td class="s"><pre>=head1 NAME
 
 Person - The great new Person!
@@ -40,16 +40,15 @@ Version 0.01
 
 =cut</pre></td></tr>
 <tr><td class="h">18</td><td colspan="7"></td></tr><tr><td class="h">19</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">our $VERSION = &#39;0.01&#39;;</td></tr>
-<tr><td class="h">20</td><td colspan="7"></td></tr><tr><td class="h">21</td><td colspan="7"></td></tr><tr><td class="h">22 - 42</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
+<tr><td class="h">20</td><td colspan="7"></td></tr><tr><td class="h">21</td><td colspan="7"></td></tr><tr><td class="h">22 - 43</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
+Person.
 
 &nbsp;&nbsp;&nbsp;&nbsp;use Person;
 
-&nbsp;&nbsp;&nbsp;&nbsp;my $foo = Person-&gt;new();
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;print Person-&gt;sound, &quot;\n&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;Person-&gt;speak;
+&nbsp;&nbsp;&nbsp;&nbsp;Person-&gt;speak(&#39;Hello, world!&#39;);
 
 =head1 EXPORT
 
@@ -58,16 +57,15 @@ if you don&#39;t export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 sound
+
+The humming sound.
 
 =cut</pre></td></tr>
-<tr><td class="h">43</td><td colspan="7"></td></tr><tr><td class="h">44 - 46</td><td colspan="6"></td><td class="s"><pre>=head2 function2
-
-=cut</pre></td></tr>
-<tr><td class="h">47</td><td colspan="7"></td></tr><tr><td class="h">48</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub sound {</td></tr>
-<tr><td class="h">49</td><td><div class="c0">0</div></td><td></td><td></td><td><div class="c0"><a href="blib-lib-Person-pm--subroutine.html#L49">0</a></div></td><td><div class="c0">0</div></td><td></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;&#39;Hmmm~~~&#39;</td></tr>
-<tr><td class="h">50</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
-<tr><td class="h">51</td><td colspan="7"></td></tr><tr><td class="h">52 - 139</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
+<tr><td class="h">44</td><td colspan="7"></td></tr><tr><td class="h">45</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub sound {</td></tr>
+<tr><td class="h">46</td><td><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Person-pm--subroutine.html#L46">4</a></div></td><td><div class="c3">1</div></td><td><div>60321</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;&#39;Hmmm~~~&#39;</td></tr>
+<tr><td class="h">47</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
+<tr><td class="h">48</td><td colspan="7"></td></tr><tr><td class="h">49 - 136</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
 
 Junichi Hayashi, C&lt;&lt; &lt;j-hayashi at seesaa.co.jp&gt; &gt;&gt;
 
@@ -155,7 +153,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut</pre></td></tr>
-<tr><td class="h">140</td><td colspan="7"></td></tr><tr><td class="h">141</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of Person</td></tr>
+<tr><td class="h">137</td><td colspan="7"></td></tr><tr><td class="h">138</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of Person</td></tr>
 </table>
 </body>
 </html>

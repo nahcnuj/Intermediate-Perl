@@ -22,6 +22,11 @@ ok(defined &Animal::sound, 'Animal::sound is defined');
     like($at, qr/have to define sound()/, 'speak() dies');
 }
 
+{
+    eval { Animal->speak('Hello, world!') } or my $at = $@;
+    like($at, qr/Animal can not speak/, 'Animal can not speak');
+}
+
 package Foofle {
     use parent qw(Animal);
     sub sound { 'foof' }

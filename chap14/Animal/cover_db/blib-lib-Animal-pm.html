@@ -20,16 +20,16 @@ http://www.pjcj.net
 <h1>File Coverage</h1>
 <table>
 <tr><td class="h" align="right">File:</td><td align="left">blib/lib/Animal.pm</td></tr>
-<tr><td class="h" align="right">Coverage:</td><td align="left" class="c1">88.0%</td></tr>
+<tr><td class="h" align="right">Coverage:</td><td align="left" class="c3">100.0%</td></tr>
 </table>
 <div><br/></div>
 <table>
 <tr><th>line</th><th>stmt</th><th>bran</th><th>cond</th><th>sub</th><th>pod</th><th>time</th><th>code</th></tr>
 <tr><td class="h">1</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">package Animal;</td></tr>
-<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L3">5</a></div></td><td></td><td><div>19081</div><div>10</div></td><td class="s">use 5.006;</td></tr>
-<tr><td class="h">4</td><td><div class="c3">5</div><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L4">5</a></div></td><td></td><td><div>19</div><div>6</div><div>50</div></td><td class="s">use strict;</td></tr>
-<tr><td class="h">5</td><td><div class="c3">5</div><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L5">5</a></div></td><td></td><td><div>12</div><div>6</div><div>67</div></td><td class="s">use warnings;</td></tr>
-<tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7</td><td><div class="c3">5</div><div class="c3">5</div><div class="c3">5</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L7">5</a></div></td><td></td><td><div>285</div><div>268</div><div>15</div></td><td class="s">use parent qw(LivingCreature);</td></tr>
+<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">12</div><div class="c3">12</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L3">12</a></div></td><td></td><td><div>35241</div><div>24</div></td><td class="s">use 5.006;</td></tr>
+<tr><td class="h">4</td><td><div class="c3">12</div><div class="c3">12</div><div class="c3">12</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L4">12</a></div></td><td></td><td><div>48</div><div>14</div><div>116</div></td><td class="s">use strict;</td></tr>
+<tr><td class="h">5</td><td><div class="c3">12</div><div class="c3">12</div><div class="c3">12</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L5">12</a></div></td><td></td><td><div>29</div><div>19</div><div>154</div></td><td class="s">use warnings;</td></tr>
+<tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7</td><td><div class="c3">12</div><div class="c3">12</div><div class="c3">12</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L7">12</a></div></td><td></td><td><div>563</div><div>611</div><div>41</div></td><td class="s">use parent qw(LivingCreature);</td></tr>
 <tr><td class="h">8</td><td colspan="7"></td></tr><tr><td class="h">9 - 17</td><td colspan="6"></td><td class="s"><pre>=head1 NAME
 
 Animal - The great new Animal!
@@ -40,16 +40,9 @@ Version 0.01
 
 =cut</pre></td></tr>
 <tr><td class="h">18</td><td colspan="7"></td></tr><tr><td class="h">19</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">our $VERSION = &#39;0.01&#39;;</td></tr>
-<tr><td class="h">20</td><td colspan="7"></td></tr><tr><td class="h">21</td><td colspan="7"></td></tr><tr><td class="h">22 - 42</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
+<tr><td class="h">20</td><td colspan="7"></td></tr><tr><td class="h">21</td><td colspan="7"></td></tr><tr><td class="h">22 - 37</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
-&nbsp;&nbsp;&nbsp;&nbsp;use Animal;
-
-&nbsp;&nbsp;&nbsp;&nbsp;my $foo = Animal-&gt;new();
-&nbsp;&nbsp;&nbsp;&nbsp;...
+An interface of all animals
 
 =head1 EXPORT
 
@@ -58,21 +51,25 @@ if you don&#39;t export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 speak
+
+Let Animal speak
 
 =cut</pre></td></tr>
-<tr><td class="h">43</td><td colspan="7"></td></tr><tr><td class="h">44</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub speak {</td></tr>
-<tr><td class="h">45</td><td><div class="c3">2</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L45">2</a></div></td><td><div class="c0">0</div></td><td><div>713</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;my $class = shift;</td></tr>
-<tr><td class="h">46</td><td><div class="c3">2</div></td><td><div class="c0" title="-/F"><a href="blib-lib-Animal-pm--branch.html#L46">50</a></div></td><td></td><td></td><td></td><td><div>5</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;die &quot;Animal can not speak!&quot; if @_;</td></tr>
-<tr><td class="h">47</td><td><div class="c3">2</div></td><td></td><td></td><td></td><td></td><td><div>5</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;print &quot;A $class goes &quot;, $class-&gt;sound, &quot;!\n&quot;;</td></tr>
-<tr><td class="h">48</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
-<tr><td class="h">49</td><td colspan="7"></td></tr><tr><td class="h">50 - 52</td><td colspan="6"></td><td class="s"><pre>=head2 function2
+<tr><td class="h">38</td><td colspan="7"></td></tr><tr><td class="h">39</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub speak {</td></tr>
+<tr><td class="h">40</td><td><div class="c3">14</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L40">14</a></div></td><td><div class="c3">1</div></td><td><div>2155</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;my $class = shift;</td></tr>
+<tr><td class="h">41</td><td><div class="c3">14</div></td><td><div class="c3" title="T/F"><a href="blib-lib-Animal-pm--branch.html#L41">100</a></div></td><td></td><td></td><td></td><td><div>55</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;die &quot;Animal can not speak!&quot; if @_;</td></tr>
+<tr><td class="h">42</td><td><div class="c3">12</div></td><td></td><td></td><td></td><td></td><td><div>49</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;print &quot;A $class goes &quot;, $class-&gt;sound, &quot;!\n&quot;;</td></tr>
+<tr><td class="h">43</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
+<tr><td class="h">44</td><td colspan="7"></td></tr><tr><td class="h">45 - 49</td><td colspan="6"></td><td class="s"><pre>=head2 sound
+
+Return sound of Animal.
 
 =cut</pre></td></tr>
-<tr><td class="h">53</td><td colspan="7"></td></tr><tr><td class="h">54</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub sound {</td></tr>
-<tr><td class="h">55</td><td><div class="c3">2</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L55">2</a></div></td><td><div class="c0">0</div></td><td><div>34562</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;die &#39;You have to define sound() method in a subclass&#39;</td></tr>
-<tr><td class="h">56</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
-<tr><td class="h">57</td><td colspan="7"></td></tr><tr><td class="h">58 - 145</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
+<tr><td class="h">50</td><td colspan="7"></td></tr><tr><td class="h">51</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">sub sound {</td></tr>
+<tr><td class="h">52</td><td><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Animal-pm--subroutine.html#L52">4</a></div></td><td><div class="c3">1</div></td><td><div>61472</div></td><td class="s">&nbsp;&nbsp;&nbsp;&nbsp;die &#39;You have to define sound() method in a subclass&#39;</td></tr>
+<tr><td class="h">53</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
+<tr><td class="h">54</td><td colspan="7"></td></tr><tr><td class="h">55 - 142</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
 
 Junichi Hayashi, C&lt;&lt; &lt;j-hayashi at seesaa.co.jp&gt; &gt;&gt;
 
@@ -160,7 +157,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut</pre></td></tr>
-<tr><td class="h">146</td><td colspan="7"></td></tr><tr><td class="h">147</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of Animal</td></tr>
+<tr><td class="h">143</td><td colspan="7"></td></tr><tr><td class="h">144</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of Animal</td></tr>
 </table>
 </body>
 </html>

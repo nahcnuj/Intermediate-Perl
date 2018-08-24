@@ -21,14 +21,7 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
-
-    use Animal;
-
-    my $foo = Animal->new();
-    ...
+An interface of all animals
 
 =head1 EXPORT
 
@@ -37,7 +30,9 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 speak
+
+Let Animal speak
 
 =cut
 
@@ -47,7 +42,9 @@ sub speak {
     print "A $class goes ", $class->sound, "!\n";
 }
 
-=head2 function2
+=head2 sound
+
+Return sound of Animal.
 
 =cut
 

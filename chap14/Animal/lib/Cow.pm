@@ -18,17 +18,14 @@ Version 0.01
 
 our $VERSION = '0.01';
 
-
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
+Cow
 
     use Cow;
 
-    my $foo = Cow->new();
-    ...
+    print Cow->sound, "\n";
+    Cow->speak;
 
 =head1 EXPORT
 
@@ -37,18 +34,13 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 sound
+
+Return the sound of cow
 
 =cut
 
 sub sound { 'mooooo' }
-
-=head2 function2
-
-=cut
-
-sub function2 {
-}
 
 =head1 AUTHOR
 

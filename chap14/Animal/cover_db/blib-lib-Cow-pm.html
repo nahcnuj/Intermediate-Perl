@@ -20,16 +20,16 @@ http://www.pjcj.net
 <h1>File Coverage</h1>
 <table>
 <tr><td class="h" align="right">File:</td><td align="left">blib/lib/Cow.pm</td></tr>
-<tr><td class="h" align="right">Coverage:</td><td align="left" class="c1">80.0%</td></tr>
+<tr><td class="h" align="right">Coverage:</td><td align="left" class="c3">100.0%</td></tr>
 </table>
 <div><br/></div>
 <table>
 <tr><th>line</th><th>stmt</th><th>bran</th><th>cond</th><th>sub</th><th>pod</th><th>time</th><th>code</th></tr>
 <tr><td class="h">1</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">package Cow;</td></tr>
-<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">2</div><div class="c3">2</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L3">2</a></div></td><td></td><td><div>10215</div><div>3</div></td><td class="s">use 5.006;</td></tr>
-<tr><td class="h">4</td><td><div class="c3">2</div><div class="c3">2</div><div class="c3">2</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L4">2</a></div></td><td></td><td><div>5</div><div>2</div><div>19</div></td><td class="s">use strict;</td></tr>
-<tr><td class="h">5</td><td><div class="c3">2</div><div class="c3">2</div><div class="c3">2</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L5">2</a></div></td><td></td><td><div>6</div><div>3</div><div>22</div></td><td class="s">use warnings;</td></tr>
-<tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7</td><td><div class="c3">2</div><div class="c3">2</div><div class="c3">2</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L7">2</a></div></td><td></td><td><div>136</div><div>129</div><div>6</div></td><td class="s">use parent qw(Animal);</td></tr>
+<tr><td class="h">2</td><td colspan="7"></td></tr><tr><td class="h">3</td><td><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L3">4</a></div></td><td></td><td><div>20077</div><div>8</div></td><td class="s">use 5.006;</td></tr>
+<tr><td class="h">4</td><td><div class="c3">4</div><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L4">4</a></div></td><td></td><td><div>11</div><div>5</div><div>37</div></td><td class="s">use strict;</td></tr>
+<tr><td class="h">5</td><td><div class="c3">4</div><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L5">4</a></div></td><td></td><td><div>11</div><div>7</div><div>49</div></td><td class="s">use warnings;</td></tr>
+<tr><td class="h">6</td><td colspan="7"></td></tr><tr><td class="h">7</td><td><div class="c3">4</div><div class="c3">4</div><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L7">4</a></div></td><td></td><td><div>275</div><div>258</div><div>12</div></td><td class="s">use parent qw(Animal);</td></tr>
 <tr><td class="h">8</td><td colspan="7"></td></tr><tr><td class="h">9 - 17</td><td colspan="6"></td><td class="s"><pre>=head1 NAME
 
 Cow - The great new Cow!
@@ -40,16 +40,14 @@ Version 0.01
 
 =cut</pre></td></tr>
 <tr><td class="h">18</td><td colspan="7"></td></tr><tr><td class="h">19</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">our $VERSION = &#39;0.01&#39;;</td></tr>
-<tr><td class="h">20</td><td colspan="7"></td></tr><tr><td class="h">21</td><td colspan="7"></td></tr><tr><td class="h">22 - 42</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
+<tr><td class="h">20</td><td colspan="7"></td></tr><tr><td class="h">21 - 41</td><td colspan="6"></td><td class="s"><pre>=head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
+Cow
 
 &nbsp;&nbsp;&nbsp;&nbsp;use Cow;
 
-&nbsp;&nbsp;&nbsp;&nbsp;my $foo = Cow-&gt;new();
-&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;print Cow-&gt;sound, &quot;\n&quot;;
+&nbsp;&nbsp;&nbsp;&nbsp;Cow-&gt;speak;
 
 =head1 EXPORT
 
@@ -58,16 +56,13 @@ if you don&#39;t export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 sound
+
+Return the sound of cow
 
 =cut</pre></td></tr>
-<tr><td class="h">43</td><td colspan="7"></td></tr><tr><td class="h">44</td><td><div class="c0">0</div></td><td></td><td></td><td><div class="c0"><a href="blib-lib-Cow-pm--subroutine.html#L44">0</a></div></td><td><div class="c0">0</div></td><td></td><td class="s">sub sound { &#39;mooooo&#39; }</td></tr>
-<tr><td class="h">45</td><td colspan="7"></td></tr><tr><td class="h">46 - 48</td><td colspan="6"></td><td class="s"><pre>=head2 function2
-
-=cut</pre></td></tr>
-<tr><td class="h">49</td><td colspan="7"></td></tr><tr><td class="h">50</td><td></td><td></td><td></td><td><div class="c0"><a href="blib-lib-Cow-pm--subroutine.html#L50">0</a></div></td><td><div class="c3">1</div></td><td></td><td class="s">sub function2 {</td></tr>
-<tr><td class="h">51</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">}</td></tr>
-<tr><td class="h">52</td><td colspan="7"></td></tr><tr><td class="h">53 - 140</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
+<tr><td class="h">42</td><td colspan="7"></td></tr><tr><td class="h">43</td><td><div class="c3">4</div></td><td></td><td></td><td><div class="c3"><a href="blib-lib-Cow-pm--subroutine.html#L43">4</a></div></td><td><div class="c3">1</div></td><td><div>60364</div></td><td class="s">sub sound { &#39;mooooo&#39; }</td></tr>
+<tr><td class="h">44</td><td colspan="7"></td></tr><tr><td class="h">45 - 132</td><td colspan="6"></td><td class="s"><pre>=head1 AUTHOR
 
 Junichi Hayashi, C&lt;&lt; &lt;j-hayashi at seesaa.co.jp&gt; &gt;&gt;
 
@@ -155,7 +150,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 
 =cut</pre></td></tr>
-<tr><td class="h">141</td><td colspan="7"></td></tr><tr><td class="h">142</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of Cow</td></tr>
+<tr><td class="h">133</td><td colspan="7"></td></tr><tr><td class="h">134</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="s">1; # End of Cow</td></tr>
 </table>
 </body>
 </html>

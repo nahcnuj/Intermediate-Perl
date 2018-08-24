@@ -6,6 +6,8 @@ use warnings;
 
 use parent qw(LivingCreature);
 
+use Carp qw(croak);
+
 =head1 NAME
 
 Animal - The great new Animal!
@@ -29,6 +31,80 @@ A list of functions that can be exported.  You can delete this section
 if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
+
+=head2 named
+
+Constructor.
+
+=cut
+
+sub named {
+    my $class = shift;
+    my $name = shift;
+    my $self = {
+        Name => $name,
+        Color => $class->default_color,
+    };
+    bless $self, $class;
+}
+
+=head2 set_name
+
+Set Animal's name.
+
+=cut
+
+sub set_name {
+    ref(my $self = shift) or croak "instance variable needed";
+    my $name = shift;
+    $self->{Name} = $name;
+}
+
+=head2 set_color
+
+Set Animal's color.
+
+=cut
+
+sub set_color {
+    ref(my $self = shift) or croak "instance variable needed";
+    my $color = shift;
+    $self->{Color} = $color;
+}
+
+=head2 name
+
+Get Animal's name.
+
+=cut
+
+sub name {
+    my $either = shift;
+    ref $either
+        ? $either->{Name}       # instance
+        : "an unnamed $either"  # class
+}
+
+=head2 color
+
+Get Animal's color.
+
+=cut
+
+sub color {
+    my $either = shift;
+    ref $either
+        ? $either->{Color}
+        : $either->default_color;
+}
+
+=head2 default_color
+
+Get Animal's default color.
+
+=cut
+
+sub default_color { 'brown' }
 
 =head2 speak
 

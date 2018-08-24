@@ -43,6 +43,14 @@ Return the sound of Sheep.
 
 sub sound { 'baaaaah' }
 
+=head2 default_color
+
+Get Sheep's default color
+
+=cut
+
+sub default_color { 'white' }
+
 =head1 AUTHOR
 
 Junichi Hayashi, C<< <j-hayashi at seesaa.co.jp> >>

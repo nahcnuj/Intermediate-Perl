@@ -1,18 +1,17 @@
-package Animal;
+package RaceHorse;
 
-use v5.8;
+use 5.006;
 use strict;
 use warnings;
 
-use parent qw(LivingCreature);
+use parent qw(Horse);
 
-use Carp qw(croak);
-use Scalar::Util qw(weaken);
+use Storable qw(store retrieve);
 use Data::Dumper;
 
 =head1 NAME
 
-Animal - The great new Animal!
+RaceHorse - The great new RaceHorse!
 
 =head1 VERSION
 
@@ -25,7 +24,14 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-An interface of all animals
+Quick summary of what the module does.
+
+Perhaps a little code snippet.
+
+    use RaceHorse;
+
+    my $foo = RaceHorse->new();
+    ...
 
 =head1 EXPORT
 
@@ -34,10 +40,6 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=cut
-
-my %REGISTRY;
-
 =head2 named
 
 Constructor.
@@ -45,111 +47,30 @@ Constructor.
 =cut
 
 sub named {
-    ref(my $class = shift) and croak 'class only';
+    my $class = shift;
     my $name = shift;
-    my $self = {
-        Name => $name,
-        Color => $class->default_color,
-    };
-    bless $self, $class;
-    $REGISTRY{$self} = $self;
-    weaken($REGISTRY{$self});
+    my $self = eval { retrieve $name . '.data' };
+    print Dumper $self;
+    unless ($self) {
+        $self = $class->SUPER::named($name);
+        $self->{$_} = 0 for qw(wins places shows losses);
+    }
     $self;
 }
 
-sub registered {
-    return map { 'a ' . ref($_) . ' named ' . $_->name } grep { defined $_ } values %REGISTRY;
+sub won { shift->{wins}++; }
+sub placed { shift->{places}++; }
+sub showed { shift->{shows}++; }
+sub lost { shift->{losses}++; }
+
+sub standings {
+    my $self = shift;
+    join ', ', map "$self->{$_} $_", qw(wins places shows losses);
 }
-
-=head2 DESTROY
-
-Destructor.
-
-=cut
 
 sub DESTROY {
     my $self = shift;
-    print '[', $self->name, " has died.]\n";
-}
-
-=head2 set_name
-
-Set Animal's name.
-
-=cut
-
-sub set_name {
-    ref(my $self = shift) or croak "instance variable needed";
-    my $name = shift;
-    $self->{Name} = $name;
-}
-
-=head2 set_color
-
-Set Animal's color.
-
-=cut
-
-sub set_color {
-    ref(my $self = shift) or croak "instance variable needed";
-    my $color = shift;
-    $self->{Color} = $color;
-}
-
-=head2 name
-
-Get Animal's name.
-
-=cut
-
-sub name {
-    my $either = shift;
-    ref $either
-        ? $either->{Name}       # instance
-        : "an unnamed $either"  # class
-}
-
-=head2 color
-
-Get Animal's color.
-
-=cut
-
-sub color {
-    my $either = shift;
-    ref $either
-        ? $either->{Color}
-        : $either->default_color;
-}
-
-=head2 default_color
-
-Get Animal's default color.
-
-=cut
-
-sub default_color { 'brown' }
-
-=head2 speak
-
-Let Animal speak
-
-=cut
-
-sub speak {
-    my $class = shift;
-    die "Animal can not speak!" if @_;
-    print "A $class goes ", $class->sound, "!\n";
-}
-
-=head2 sound
-
-Return sound of Animal.
-
-=cut
-
-sub sound {
-    die 'You have to define sound() method in a subclass'
+    store $self, $self->name . '.data';
 }
 
 =head1 AUTHOR
@@ -158,8 +79,8 @@ Junichi Hayashi, C<< <j-hayashi at seesaa.co.jp> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<bug-animal at rt.cpan.org>, or through
-the web interface at L<https://rt.cpan.org/NoAuth/ReportBug.html?Queue=Animal>.  I will be notified, and then you'll
+Please report any bugs or feature requests to C<bug-. at rt.cpan.org>, or through
+the web interface at L<https://rt.cpan.org/NoAuth/ReportBug.html?Queue=.>.  I will be notified, and then you'll
 automatically be notified of progress on your bug as I make changes.
 
 
@@ -169,7 +90,7 @@ automatically be notified of progress on your bug as I make changes.
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc Animal
+    perldoc RaceHorse
 
 
 You can also look for information at:
@@ -178,19 +99,19 @@ You can also look for information at:
 
 =item * RT: CPAN's request tracker (report bugs here)
 
-L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Animal>
+L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=.>
 
 =item * AnnoCPAN: Annotated CPAN documentation
 
-L<http://annocpan.org/dist/Animal>
+L<http://annocpan.org/dist/.>
 
 =item * CPAN Ratings
 
-L<https://cpanratings.perl.org/d/Animal>
+L<https://cpanratings.perl.org/d/.>
 
 =item * Search CPAN
 
-L<https://metacpan.org/release/Animal>
+L<https://metacpan.org/release/.>
 
 =back
 
@@ -241,4 +162,4 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 =cut
 
-1; # End of Animal
+1; # End of RaceHorse

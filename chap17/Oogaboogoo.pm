@@ -5,7 +5,11 @@ use warnings;
 
 package Oogaboogoo;
 use Exporter qw(import);
+our @EXPORT;
 our @EXPORT_OK = qw(number_to_day_name number_to_month_name);
+our %EXPORT_TAGS = (
+    all => [ @EXPORT, @EXPORT_OK ],
+);
 
 sub number_to_day_name {
     my $num = shift;

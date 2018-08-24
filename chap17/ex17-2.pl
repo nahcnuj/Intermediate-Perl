@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Oogaboogoo qw(:all);
+use Oogaboogoo qw(number_to_day_name number_to_month_name);
 
 my ($sec, $min, $hour, $mday, $month, $year, $wday) = localtime;
 $year += 1900;

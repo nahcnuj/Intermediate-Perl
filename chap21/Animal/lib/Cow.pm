@@ -37,6 +37,11 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
+=head2 color
+
+Get or set Cow's color.
+Default color is spotted.
+
 =cut
 
 has 'color' => (
@@ -46,7 +51,7 @@ has 'color' => (
 
 =head2 sound
 
-Return the sound of cow
+Return the sound of Cow.
 
 =cut
 

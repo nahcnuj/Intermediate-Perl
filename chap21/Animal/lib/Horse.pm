@@ -36,16 +36,21 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
+=head2 color
+
+Get or set Horse's color.
+Default color is brown.
+
 =cut
 
 has 'color' => (
     is => 'rw',
-    default => 'brawn',
+    default => 'brown',
 );
 
 =head2 sound
 
-Return the sound of Horse
+Return the sound of Horse.
 
 =cut
 

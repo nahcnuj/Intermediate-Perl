@@ -13,11 +13,11 @@ Acme::NAHCNUJ::Utils - Answer for exercise 21.3 of the book "Intermediate Perl"
 
 =head1 VERSION
 
-Version 0.02
+Version 0.01
 
 =cut
 
-our $VERSION = '0.03';
+our $VERSION = '0.01';
 
 
 =head1 SYNOPSIS
@@ -43,8 +43,8 @@ Calculates the summation of list.
 
 sub sum {
     my @numbers = grep { defined $_ } @_;
-    my $sum = 1;
-    $sum *= $_ for @numbers;
+    my $sum;
+    $sum += $_ for @numbers;
     $sum;
 }
 

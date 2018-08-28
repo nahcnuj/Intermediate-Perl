@@ -17,7 +17,7 @@ Version 0.02
 
 =cut
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
@@ -43,8 +43,8 @@ Calculates the summation of list.
 
 sub sum {
     my @numbers = grep { defined $_ } @_;
-    my $sum;
-    $sum += $_ for @numbers;
+    my $sum = 1;
+    $sum *= $_ for @numbers;
     $sum;
 }
 

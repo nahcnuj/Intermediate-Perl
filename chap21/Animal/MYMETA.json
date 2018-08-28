@@ -1,0 +1,71 @@
+{
+   "abstract" : "The great new Animal!",
+   "author" : [
+      "Junichi Hayashi <j-hayashi@seesaa.co.jp>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "Module::Build version 0.4224",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Animal",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Moose" : "0",
+            "Test::More" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "Animal" : {
+         "file" : "lib/Animal.pm",
+         "version" : "0.01"
+      },
+      "Cow" : {
+         "file" : "lib/Cow.pm",
+         "version" : "0.01"
+      },
+      "Horse" : {
+         "file" : "lib/Horse.pm",
+         "version" : "0.01"
+      },
+      "LivingCreature" : {
+         "file" : "lib/LivingCreature.pm",
+         "version" : "0.01"
+      },
+      "Mouse" : {
+         "file" : "lib/Mouse.pm",
+         "version" : "0.01"
+      },
+      "Person" : {
+         "file" : "lib/Person.pm",
+         "version" : "0.01"
+      },
+      "RaceHorse" : {
+         "file" : "lib/RaceHorse.pm",
+         "version" : "0.01"
+      },
+      "Sheep" : {
+         "file" : "lib/Sheep.pm",
+         "version" : "0.01"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://opensource.org/licenses/artistic-license-2.0.php"
+      ]
+   },
+   "version" : "0.01",
+   "x_serialization_backend" : "JSON::PP version 2.27300_01"
+}

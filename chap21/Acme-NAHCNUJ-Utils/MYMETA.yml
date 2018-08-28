@@ -16,7 +16,10 @@ name: Acme-NAHCNUJ-Utils
 provides:
   Acme::NAHCNUJ::Utils:
     file: lib/Acme/NAHCNUJ/Utils.pm
-    version: '0.01'
+    version: '0.02'
+  Tie::Cycle:
+    file: lib/Tie/Cycle.pm
+    version: '1.224'
 resources:
   license: http://opensource.org/licenses/artistic-license-2.0.php
 version: '0.01'

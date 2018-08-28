@@ -1,6 +1,7 @@
 Build.PL
 Changes
 lib/Acme/NAHCNUJ/Utils.pm
+lib/Tie/Cycle.pm
 MANIFEST			This list of files
 META.json
 META.yml

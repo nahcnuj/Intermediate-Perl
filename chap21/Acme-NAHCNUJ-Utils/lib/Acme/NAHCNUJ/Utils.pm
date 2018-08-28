@@ -4,9 +4,12 @@ use 5.006;
 use strict;
 use warnings;
 
+use Exporter qw(import);
+our @EXPORT = qw(sum);
+
 =head1 NAME
 
-Acme::NAHCNUJ::Utils - The great new Acme::NAHCNUJ::Utils!
+Acme::NAHCNUJ::Utils - Answer for exercise 21.3 of the book "Intermediate Perl"
 
 =head1 VERSION
 
@@ -19,14 +22,11 @@ our $VERSION = '0.01';
 
 =head1 SYNOPSIS
 
-Quick summary of what the module does.
-
-Perhaps a little code snippet.
+Calculates the summation of list.
 
     use Acme::NAHCNUJ::Utils;
 
-    my $foo = Acme::NAHCNUJ::Utils->new();
-    ...
+    my $foo = sum(1, 2, 3); #=> 6
 
 =head1 EXPORT
 
@@ -35,18 +35,17 @@ if you don't export anything, such as for a purely object-oriented module.
 
 =head1 SUBROUTINES/METHODS
 
-=head2 function1
+=head2 sum
+
+Calculates the summation of list.
 
 =cut
 
-sub function1 {
-}
-
-=head2 function2
-
-=cut
-
-sub function2 {
+sub sum {
+    my @numbers = grep { defined $_ } @_;
+    my $sum;
+    $sum += $_ for @numbers;
+    $sum;
 }
 
 =head1 AUTHOR
